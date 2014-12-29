@@ -1,7 +1,7 @@
 extends index
 block content
     div(id="container")
-        form(method="POST",action="/room")
-            input(id="username",name="uname",placeholder="  username")
-            input(id="room",name='roomId',placeholder="  roomId")
-            input(type="submit",value="submit")
+        h3 Enter url and other details
+        form(method="POST",action="/fun")
+            input(id="url",class="fInp",name="url",placeholder="   url")
+            input(type="submit",value="GET",class="fInp")

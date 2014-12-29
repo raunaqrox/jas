@@ -1,9 +1,8 @@
 $(document).ready(function(){
     $('form').submit(function(e){
-        var userName = $('#username').val();
-        var room = $('#room').val();
-        if(userName.length == 0 || room.length == 0){
-            alert("Both fields need to be filled");
+        var url = $('#url').val();
+        if(url.length === 0){
+            alert("url cannot be empty");
             e.preventDefault();
         }
     });

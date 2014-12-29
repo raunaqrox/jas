@@ -1,28 +1,29 @@
 {
   "name": "lasquare",
   "version": "0.0.1",
-  "description": "last square standing game",
-  "main": "server.js",
+  "description": "A generalized scraper",
+  "main": "app.js",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/raunaqrox/lasquare"
+    "url": "https://github.com/raunaqrox/jas"
   },
   "author": "sahebjot",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/raunaqrox/lasquare"
+    "url": "https://github.com/raunaqrox/jas"
   },
-  "homepage": "https://github.com/raunaqrox/lasquare",
+  "homepage": "https://github.com/raunaqrox/jas",
   "dependencies": {
-    "body-parser": "^1.9.2",
+    "body-parser": "^1.10.0",
     "express": "^4.10.1",
-    "express-session": "^1.9.1",
+    "express-session": "^1.9.3",
     "jade": "^1.7.0",
-    "socket.io": "^1.2.0"
+    "request": "^2.51.0",
+    "requests": "0.0.1"
   }
 }

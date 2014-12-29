@@ -1,0 +1,11 @@
+extends index2
+block content
+    div(id="options")
+        input(id="selector",placeholder="   selector here")
+        button(id="select") selector
+    div(id="htmlContainer")
+        h5 
+            =toSend.body
+    div(id="shareLink")
+        button Generate Link
+        a(id="scrapeLink")
