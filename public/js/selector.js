@@ -8,7 +8,7 @@ $(document).ready(function(){
     select.on('click', function(){
         var mySelector = selector.val();
         if(mySelector.length!==0){
-            var tex = $(html).find(mySelector).text();
+            var tex = $(html).find(mySelector).html();
             container.text(tex); 
         }else{
             container.text(originalHtml);

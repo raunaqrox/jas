@@ -5,10 +5,6 @@ exports.home = function(req,res){
 
 exports.fun = function(req,res){
     var url = req.body.url;
-    var cl = req.body.class;
-    var id = req.body.id;
-    var element = req.body.element;
-    if(cl.length === 0 && id.length===0 && element.length === 0){
         request.get(url, function(error, response, body){
              if (!error && response.statusCode == 200) {
                  var toSend = {};
@@ -19,5 +15,4 @@ exports.fun = function(req,res){
                  res.render('fun',{'error':error});
              }
         });
-    }
 };
