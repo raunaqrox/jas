@@ -3,7 +3,11 @@ exports.home = function(req,res){
     res.render('home');
 };
 
-exports.fun = function(req,res){
+exports.gFun = function(req,res){
+    res.render('home');
+};
+
+exports.pFun = function(req,res){
     var url = req.body.url;
         request.get(url, function(error, response, body){
              if (!error && response.statusCode == 200) {

@@ -50,8 +50,8 @@ app.set('views',__dirname+'/views');
  * %%%%%%%%%%%%%%%%%% */
 
 app.get('/', index.home);
-app.post('/fun', index.fun);
-
+app.post('/fun', index.pFun);
+app.get('/fun', index.gFun);
 /* %%%%%%%%%%%%%%%%%%%%
  *
  *  Listening on port 3000

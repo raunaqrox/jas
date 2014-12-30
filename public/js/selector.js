@@ -1,6 +1,7 @@
 $(document).ready(function(){
+   
     var myHtml = $('#htmlContainer').text();
-    html = $.parseHTML(myHtml);
+    var html = $.parseHTML(myHtml);
     var selector; 
     var container; 
     var originalHtml; 
@@ -8,11 +9,16 @@ $(document).ready(function(){
     var nOfInp;
     var moreSelectors;
     var options;
+
     function selectorResult(){
         var mySelector = $(this).val();
         if(mySelector.length!==0){
-            var tex = $(html).find(mySelector).html();
-            container.text(tex); 
+            var tex = $(html).find(mySelector);
+            var s = '';
+            for(var i=0;i<tex.length;i++){
+                s += $(tex[i]).html();
+            }
+            container.text(s);
         }else{
             container.text(originalHtml);
         }
@@ -21,10 +27,11 @@ $(document).ready(function(){
     function removeThis(){
         var temp = $(this).attr('id').split('_')[1];
         $('#'+temp).remove();
+        nOfInp -= 1;
     }
 
     function addInput(){
-        nOfInp+=1;
+        nOfInp += 1;
         var toAppend = "<br><div id='"+nOfInp+"'><input class='fOpInp' id='selector_'"+nOfInp+" placeholder='   selector "+nOfInp+" here'><button id='X_"+nOfInp+"'>X</button></div>";
         options.append(toAppend);
         inputs = $('input');
@@ -32,6 +39,7 @@ $(document).ready(function(){
         $(x).on('click', removeThis);
         $(inputs[nOfInp-1]).on('change input', selectorResult);
     }
+
     function init(){
         options = $('#options');
         moreSelectors = $('#moreSelec');
@@ -43,5 +51,6 @@ $(document).ready(function(){
         inputs.on('input change', selectorResult);
         moreSelectors.on('click', addInput);
     }
+
     init();
 });
