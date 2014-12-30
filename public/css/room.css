@@ -43,11 +43,18 @@ body{
     margin:50px auto;
     width:30%;
 }
-#options>input{
+#options>input {
+    border-radius:10px;
+    margin:10px;
+}
+.fOpInp{
     border-radius:10px;
     margin:10px;
 }
 #shareLink{
     margin:auto;
     text-align:center;
+}
+#moreSelec{
+   float:right; 
 }
