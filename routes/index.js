@@ -1,4 +1,5 @@
 var request = require('request');
+
 exports.home = function(req,res){
     res.render('home');
 };
@@ -9,7 +10,7 @@ exports.gFun = function(req,res){
 
 exports.pFun = function(req,res){
     var url = req.body.url;
-        request.get(url, function(error, response, body){
+        request.get(url,{rejectUnauthorized : false}, function(error, response, body){
              if (!error && response.statusCode == 200) {
                  var toSend = {};
                  toSend.url = url;
